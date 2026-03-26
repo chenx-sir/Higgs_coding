@@ -11,7 +11,7 @@ cd /home/chenxsir/thesis1
 # 2. 运行快速测试（验证环境）
 bash run_higgstools.sh test
 
-# 3. 如果测试通过，运行完整扫描（顶刊级）
+# 3. 如果测试通过，运行完整扫描
 bash run_higgstools.sh full
 
 # 4. 检查结果
@@ -338,7 +338,7 @@ cp higgstools_2hdm_results/scan_results.csv ~/my_paper/supplementary/
 **你现在有**:
 - ✓ 完整的 2HDM Type-I 分析框架
 - ✓ 自动处理的环境问题
-- ✓ 顶刊级质量的结果
+- ✓ 结果
 - ✓ 可直接用于论文的图表和表格
 
 **下一步**:
@@ -360,4 +360,3 @@ bash run_higgstools.sh full
 - HiggsTools 文档: https://higgsbounds.gitlab.io/higgstools/
 - 本项目代码: 完全自包含，可在 GitHub 上分享
 
-祝你论文投稿顺利！🚀
