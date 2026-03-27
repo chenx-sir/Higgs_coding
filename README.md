@@ -24,7 +24,6 @@ print("""
 2. 完整扫描
    $ python run.py full
    → 运行 60×60 = 3600 个点的完整扫描
-   → 适合投稿结果（~1-2 小时，取决于硬件）
 
 3. 自定义扫描
    $ python run.py custom --n-tanb 40 --n-sinba 40 --mHp 400
@@ -110,7 +109,6 @@ print("""
 
 案例 2: 精细扫描（发论文用）
   config["SCAN_POINTS"] = (100, 100)  # 1 万个点
-  # 注意：会需要 2-3 小时计算
 
 案例 3: 扩展扫描范围
   config["TANB_RANGE"] = (0.1, 100.0)   # 更大的范围
@@ -165,59 +163,7 @@ Q8: 如何并行计算以加快速度?
 """)
 
 
-# ==================== 【4】论文写作建议 ====================
-
-print("""
-【论文写作建议】
-
-方法部分框架：
------------
-"We constrain the 2HDM Type-I parameter space using the HiggsTools 
-framework, which combines HiggsSignals (fit to Higgs measurements) 
-and HiggsBounds (theoretical and experimental constraints).
-
-We perform a parameter scan in the (tan β, sin(β-α)) plane with 
-{n_points} points, covering tan β ∈ [{tanb_min}, {tanb_max}] and 
-sin(β-α) ∈ [{sinba_min}, {sinba_max}]. The reference Higgs mass is 
-set to {mH} GeV, and the charged Higgs mass to {mHp} GeV.
-
-Results are presented as profile likelihoods in terms of Δχ², with 
-68% and 95% confidence level contours. The allowed parameter space 
-is further constrained by theoretical consistency and LHC experimental 
-limits implemented in HiggsBounds."
-
-结果部分框架：
------------
-"Figure {X} shows the allowed parameter space at 68% and 95% CL from 
-HiggsSignals (green and yellow regions), with experimental constraints 
-from HiggsBounds (red shading indicates excluded regions). The best-fit 
-point is marked by a red star, corresponding to...
-
-The profile likelihood scans in Figure {Y} show the one-dimensional 
-constraints on tan β and sin(β-α). At 95% CL, we find...
-tan β < {value}  or  sin(β-α) > {value}"
-
-表格框架：
---------
-使用 benchmark_table.tex 中的表格，caption 示例：
-"Benchmark points in the 2HDM Type-I parameter space consistent with 
-all constraints at 95% CL. The Δχ² values are relative to the best fit."
-
-补充材料：
---------
-- 提供 scan_results.csv 作为附录
-- 说明：CSV 包含所有扫描点的 tan β, sin(β-α), χ², HiggsBounds 结果
-
-引用文献：
---------
-[1] P. Bechtle et al., Comput. Phys. Commun. 181 (2010) 138, 1102.1898
-[2] P. Bechtle et al., Comput. Phys. Commun. 191 (2015) 52, 1502.04199
-[3] HiggsTools: https://higgsbounds.gitlab.io/higgstools/
-
-""")
-
-
-# ==================== 【5】预期输出 ====================
+# ==================== 【4】预期输出 ====================
 
 print("""
 【预期输出示例】
@@ -283,7 +229,7 @@ sin(β-α): 100%|███████| 3600/3600  [~60 min on Intel i7]
 """)
 
 
-# ==================== 【6】高级技巧 ====================
+# ==================== 【5】高级技巧 ====================
 
 print("""
 【高级技巧】
